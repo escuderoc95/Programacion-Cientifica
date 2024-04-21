@@ -84,6 +84,7 @@ The object-oriented implementation does not affect the obtained graphs, resultin
 
 <div align="center">
   <img src="opp.png" alt="Vista previa del juego"/>
+
 </div>
 <div align="center"> Output voltage and current of the inductor with the original code using objects-oriented programming  </div> 
 <br>
@@ -103,4 +104,17 @@ The difference observed is not very significant; the object-oriented code exhibi
 In the figure 3, we can observe a comparison of the two codes. In the upper part, we have the execution time of the original code, without modifications, and in the lower part, we have the object-oriented code. We can clearly see a significant reduction in execution time.
 
 The code implementations for both buck converters show similar results in terms of performance and accuracy in simulating the system response. However, it has been observed that the object-oriented implementation shows a more organized algorithm, which improves the understandability and maintainability of the code. To further improve the code, the following enhancements could be considered: performance improvement, additional enhancements can be executed to improve the computational efficiency of the algorithm, such as optimizing the operations in NumPy to reduce the execution time
+
+
+**References** 
+
+[1]	U. M. P. K. M. School of Electrical Systems Engineering, “Small-signal AC modeling technique of Buck converter with DSP based Proportional-Integral-Derivative (PID) controlle,” IEEE, 2009.
+
+[2]	J. J. Herrera-Pérez and A. Garcés-Ruiz, “Análisis de estabilidad de convertidores de segundo orden con la metodología de optimización de suma de polinomios cuadráticos,” Transactions on Energy Systems and Engineering Applications, vol. 1, no. 1, pp. 49–58, Dec. 2020, doi: 10.32397/tesea.vol1.n1.4.
+
+[3]	J. Miguel Yate Alcalá, “PROYECTO FIN DE CARRERA INGENIERO ELECTRÓNICO por.”
+
+[4]	N. S. Zúñiga-Peña, M. A. Márquez-Vera, J. C. Ramos-Fernández, L. F. Cerecero-Natale, and F. Muñoz-Palacios, “Regulación de voltaje de un convertidor buck-boost mediante su modelo difuso inverso Voltage regulation for a buck-boost converter by using its inverse fuzzy model,” 2018.
+
+[5]	S. P. L. 1, L. G. G. M. 2 Rafael Gallardo A.1, “Diseño de un cargador de baterías en aplicaciones de energía solar,” MASKANA, I+D+ingeniería, 2014.
 
