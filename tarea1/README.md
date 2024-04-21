@@ -24,10 +24,9 @@ Switch model (Inductor currents and capacitor voltages are described):
 $$di_Ldt=V_gu−V_{cL}$$
 `
 <div align="center">
-  <img src="original_matlab.png" alt="Vista previa del juego" width="600" height="394"/>
+  <img src="original_matlab.png" alt="Vista previa del juego"/>
 </div>
 `
-![csss](tarea1/imagenes/original_matlab.png)
   
 To perform the mathematical model, we use the software MATLAB, in which we will develop all the equations and use the necessary variables to solve the behavior of this convertePrincipio del formularior. 
 
