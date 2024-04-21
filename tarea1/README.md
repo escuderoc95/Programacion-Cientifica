@@ -45,16 +45,15 @@ The following graph is obtained from the code implemented in Python.
 
 
 <div align="center">
-  <img src="original_matlab.png" alt="Vista previa del juego"/>
+  <img src="Figure_1.png" alt="Vista previa del juego"/>
 </div>
 
- 
+<div align="center"> Output voltage and current of the inductor with the original code.Figure_1  </div> 
+<br>
+In the Figure_1, it can be observed that the voltage remains at a voltage of 6V, and at time 0.012, we are going to increase the duty cycle by 1%. So, we will go from 0.5 to 0.51. The same change happens with the current. Principio del formulario. 
 
-Figure 2: Output voltage and current of the inductor with the original code. 
 
-In the figure 2, it can be observed that the voltage remains at a voltage of 6V, and at time 0.012, we are going to increase the duty cycle by 1%. So, we will go from 0.5 to 0.51. The same change happens with the current. Principio del formulario 
-
-Now, three algorithms are selected, each of which includes loops, and their complexity is evaluated. 
+**Now, three algorithms are selected, each of which includes loops, and their complexity is evaluated.** 
 Three algorithms are developed, one of which calculates the output power of the converter, another determines the period of the inductor current signal, and a third algorithm enhances the calculation of the converter model equations. For the algorithms, variables are first initialized for their operation. Then, the duty cycle, converter equations, and power are calculated using 'for' loops. The presented algorithms have a complexity of O(n), which is linear, as they involve simple loops iterating over a fixed and small number of elements. 
 
 The codes start with a 'for' loop that calculates the duty cycle and the PWM control signal for each time step in the time vector. Then, another 'for' loop is executed to compute the voltage across the capacitor and the current through the inductor using the Buck converter equations. Additionally, the diode action is considered to prevent negative currents in the inductor. Subsequently, the instantaneous output power is calculated by multiplying the capacitor voltage by the inductor current. Next, the average power is computed by summing all instantaneous powers and dividing by the total number of samples. Finally, the zero-crossing of the inductor current is found to calculate the period of the current signal (iL_sw), and the result is printed. 
