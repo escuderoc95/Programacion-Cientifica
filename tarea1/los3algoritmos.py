@@ -72,6 +72,7 @@ potencia_promedio = suma_potencia / len(potencia_salida)
 
 # Imprimir la potencia promedio de salida
 print("Potencia promedio de salida:", potencia_promedio)
+
 #algorimo 3
 # Encontrar cruces por cero
 zero_crossings = np.where(np.diff(np.sign(iL_sw)))[0]
