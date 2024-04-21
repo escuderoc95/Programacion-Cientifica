@@ -18,9 +18,9 @@ To model the buck converter, mathematical equations are needed to analyze the sy
 Switch model (Inductor currents and capacitor voltages are described): 
 
 $$\frac{di_{l}}{dt}=\frac{V_{g}-V_{c}}{L}$$
+
 $$\frac{dV_{c}}{dt}=\frac{i_{L}}{C}-\frac{V_{c}}{CR}$$
 
- 
 To perform the mathematical model, we use the software MATLAB, in which we will develop all the equations and use the necessary variables to solve the behavior of this convertePrincipio del formularior. 
 
 The variables to develop the buck converter model are: 
@@ -35,7 +35,7 @@ The variables to develop the buck converter model are:
 
 The code is structured as follows: first, the system variables are defined. The integration step dt is established, along with the simulation time Tmax and the time vector t. Then, vectors are initialized to store the variables. Next, the duty cycle is defined. After 12 ms, the duty cycle increases by 1%. The pulse width modulation (PWM) is confined between zero and t, and the output u is defined to ensure a proper pulse width. Following this, the switched model is defined, and Euler integration is performed. The final step involves controlling the diode to prevent the current flowing through it from becoming negative. 
 
-A code is developed in matlab which is passed to python programming (**ecuaciones_dinamicas_original**).
+A code is developed in matlab which is passed to python programming (**ecuaciones_dinamicas_original.py**).
 
 After implementing the code, the most relevant variables, which are the output voltage and the inductor current, are plotted to analyze their behavior with the simulations. 
 
@@ -43,55 +43,57 @@ Furthermore, the code includes a main loop, a 'for' loop, which performs the cal
 
 The following graph is obtained from the code implemented in Python. 
 
-
 <div align="center">
   <img src="Figure_1.png" alt="Vista previa del juego"/>
 </div>
 
-<div align="center"> Output voltage and current of the inductor with the original code.Figure_1  </div> 
+<div align="center"> Output voltage and current of the inductor with the original code, Figure_1  </div> 
 <br>
+
 In the Figure_1, it can be observed that the voltage remains at a voltage of 6V, and at time 0.012, we are going to increase the duty cycle by 1%. So, we will go from 0.5 to 0.51. The same change happens with the current. Principio del formulario. 
 
+<br>
 
 **Now, three algorithms are selected, each of which includes loops, and their complexity is evaluated.** 
+
 Three algorithms are developed, one of which calculates the output power of the converter, another determines the period of the inductor current signal, and a third algorithm enhances the calculation of the converter model equations. For the algorithms, variables are first initialized for their operation. Then, the duty cycle, converter equations, and power are calculated using 'for' loops. The presented algorithms have a complexity of O(n), which is linear, as they involve simple loops iterating over a fixed and small number of elements. 
 
 The codes start with a 'for' loop that calculates the duty cycle and the PWM control signal for each time step in the time vector. Then, another 'for' loop is executed to compute the voltage across the capacitor and the current through the inductor using the Buck converter equations. Additionally, the diode action is considered to prevent negative currents in the inductor. Subsequently, the instantaneous output power is calculated by multiplying the capacitor voltage by the inductor current. Next, the average power is computed by summing all instantaneous powers and dividing by the total number of samples. Finally, the zero-crossing of the inductor current is found to calculate the period of the current signal (iL_sw), and the result is printed. 
 
-The implemented code is as follows in figure 3: 
+The implemented code is as follows in **los3algoritmos.py**, this code has the implementation of 3 codes with use of loops. 
 
- 
+**After selecting the codes modifications are made to the code to reduce its complexity and improve its performance. Additionally, its new complexity is calculated.**
 
-Figure 3: Implementation of 3 codes with use of loops. 
+One of the modifications to the code was to define a function calculate_values() to calculate the values of the inductor current (iL_sw) and the capacitor voltage (vC_sw) for each time step using the differential equations of the Buck converter, something inside this function, calculate the derivative of the inductor current (diL_dt_sw) and the capacitor voltage (dVc_dt_sw) using the circuit equations, then update the inductor current and capacitor voltage values for each time step. In addition, functions are used to calculate averages, calculate differences between elements in an array, return positions of elements in an array and function to determine the sign of the elements of an array, **algoritmos.py**.  
 
-After selecting the codes modifications are made to the code to reduce its complexity and improve its performance. Additionally, its new complexity is calculated. 
-
-One of the modifications to the code was to define a function calculate_values() to calculate the values of the inductor current (iL_sw) and the capacitor voltage (vC_sw) for each time step using the differential equations of the Buck converter, something inside this function, calculate the derivative of the inductor current (diL_dt_sw) and the capacitor voltage (dVc_dt_sw) using the circuit equations, then update the inductor current and capacitor voltage values for each time step. In addition, functions are used to calculate averages, calculate differences between elements in an array, return positions of elements in an array and function to determine the sign of the elements of an array, figure 4.  
-
-Texto
-
-Descripción generada automáticamente 
-
-Figure 4: modifications to the previous algorithms. 
-
-The code is now rewritten using Object Oriented Programming. It is also graphed and finished with the comparison between the implemented codes. 
+**The code is now rewritten using Object Oriented Programming. It is also graphed and finished with the comparison between the implemented codes.**
 
 Functions and formulas are used, such as: 
 
 __init__: This method initializes the variables or attributes, which represent the parameters of the converter and the vectors to store the results. 
 
-calculate: This method performs the converter calculations. It includes the calculation of the duty cycle(d_sw), the voltage on the capacitor(vC_sw), and the current in the inductor(iL_sw) for each time step in the time vector(t). The following formulas are used. 
+**calculate**: This method performs the converter calculations. It includes the calculation of the duty cycle(d_sw), the voltage on the capacitor(vC_sw), and the current in the inductor(iL_sw) for each time step in the time vector(t). The following formulas are used. 
 
-graficar: This method plots the voltage on the capacitor(vC_sw) and the current in the inductor(iL_sw) as a function of time. 
+**graficar**: This method plots the voltage on the capacitor(vC_sw) and the current in the inductor(iL_sw) as a function of time. 
 
-All this is developed in the figure 5: 
-
- 
-
- 
-
- 
-
-Figure 5: Code using objects-oriented programming. 
+All this is developed in the **ecuaciones_dinamicas_oop.py**, use code using objects-oriented programming. 
 
 subsequently, an object of the class ConvertidorDCDC is instantiated with the specific parameters of the converter (resistance, inductance, capacitance, input and output voltages), then the calculate method is called to perform the calculations of the converter behavior. The code is finalized with the graficar method to visualize the results. 
+
+The object-oriented implementation does not affect the obtained graphs, resulting in the same graphical representation as in the original code in the figure 2.
+
+<div align="center">
+  <img src="opp.png" alt="Vista previa del juego"/>
+</div>
+<div align="center"> Output voltage and current of the inductor with the original code using objects-oriented programming  </div> 
+<br>
+
+The graphs display the output voltage of the converter and the current in an inductor circuit. The output voltage is regulated at 6V. This is achieved by solving the differential equations of the converter, and a duty cycle of 0.5 is assigned. This regulates the output from 12V to 6V and increasing this duty cycle to 0.51 similarly regulates the output voltage. The current is also calculated using the equations, resulting in an average value of 1A.
+
+<br>
+
+
+The difference observed is not very significant; the object-oriented code exhibits a slightly faster response than the original.
+In the figure 7, we can observe a comparison of the two codes. In the upper part, we have the execution time of the original code, without modifications, and in the lower part, we have the object-oriented code. We can clearly see a significant reduction in execution time.
+The code implementations for both buck converters show similar results in terms of performance and accuracy in simulating the system response. However, it has been observed that the object-oriented implementation shows a more organized algorithm, which improves the understandability and maintainability of the code. To further improve the code, the following enhancements could be considered: performance improvement, additional enhancements can be executed to improve the computational efficiency of the algorithm, such as optimizing the operations in NumPy to reduce the execution time
+
