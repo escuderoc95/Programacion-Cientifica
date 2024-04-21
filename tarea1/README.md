@@ -92,8 +92,15 @@ The graphs display the output voltage of the converter and the current in an ind
 
 <br>
 
+<div align="center">
+  <img src="Imagen1.png" alt="Vista previa del juego"/>
+</div>
+<div align="center"> Output voltage and current of the inductor with the original code using objects-oriented programming, figure 3  </div> 
+<br>
 
 The difference observed is not very significant; the object-oriented code exhibits a slightly faster response than the original.
-In the figure 7, we can observe a comparison of the two codes. In the upper part, we have the execution time of the original code, without modifications, and in the lower part, we have the object-oriented code. We can clearly see a significant reduction in execution time.
+
+In the figure 3, we can observe a comparison of the two codes. In the upper part, we have the execution time of the original code, without modifications, and in the lower part, we have the object-oriented code. We can clearly see a significant reduction in execution time.
+
 The code implementations for both buck converters show similar results in terms of performance and accuracy in simulating the system response. However, it has been observed that the object-oriented implementation shows a more organized algorithm, which improves the understandability and maintainability of the code. To further improve the code, the following enhancements could be considered: performance improvement, additional enhancements can be executed to improve the computational efficiency of the algorithm, such as optimizing the operations in NumPy to reduce the execution time
 
