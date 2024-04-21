@@ -1,17 +1,13 @@
 
-Algorithms for Buck converter  
+# **Algorithms for Buck converter**  
 
- 
+**Cristian Escudero Quintero**
 
-Cristian Escudero Quintero 
-
- 
-
-Problem description: Model of Buck converter 
+## **Problem description: Model of Buck converter**
 
 Design and simulate a buck converter to reduce the output voltage from the input voltage, with the objective to regulate the controlled output voltage. 
 
-Description: 
+**Description:**
 
 Buck converter is a power converter DC-DC, in charge of reducing the input voltage to a lower DC output voltage. This converter uses a switch typically a transistor and diode, controlled by a PWM to regulate the output voltage ​[1]​. The algorithms employed in buck converters are formulated to determine the duty cycle of the switch and the circuit parameters, including current and voltage, to accomplish the intended output regulation. These algorithms may be executed utilizing various methodologies, such as solving differential equations or employing control strategies. The primary aim of these algorithms is to guarantee effective and consistent operation of the buck converter across a broad spectrum of load and input circumstances​[2]​. 
 
@@ -21,60 +17,36 @@ To model the buck converter, mathematical equations are needed to analyze the sy
 
 Switch model (Inductor currents and capacitor voltages are described): 
 
-$$di_Ldt=V_gu−V_{cL}$$
-`
-<div align="center">
-  <img src="original_matlab.png" alt="Vista previa del juego"/>
-</div>
-`
-  
+$$\frac{di_{l}}{dt}=\frac{V_{g}-V_{c}}{L}$$
+$$\frac{dV_{c}}{dt}=\frac{i_{L}}{C}-\frac{V_{c}}{CR}$$
+
+ 
 To perform the mathematical model, we use the software MATLAB, in which we will develop all the equations and use the necessary variables to solve the behavior of this convertePrincipio del formularior. 
 
 The variables to develop the buck converter model are: 
 
-**R**: Resistencia ; **L**: Inductor; **C**: Capacitor ;Vg: Input Voltage 
+**R**: Resistencia ; **L**: Inductor; **C**: Capacitor ; **Vg**: Input Voltage 
 
-**D**: Duty cycle or Voltage conversion ratio (VVg); Il: Inductor current ; Fsw: Switching frequency 
+**D**: Duty cycle or Voltage conversion ratio $\left ( \frac{V}{V_{g}} \right )$; **il**: Inductor current ; **Fsw**: Switching frequency 
 
-**Tws**: Switching period ; Tmax: Maximum time of simulation ; t: Vector that stores the time values for the simulation. 
+**Tws**: Switching period ; **Tmax**: Maximum time of simulation ; **t**: Vector that stores the time values for the simulation. 
 
-**Imax**: Length of time vector ; **V**: Output voltage ; dt: Time step 
+**Imax**: Length of time vector ; **V**: Output voltage ; **dt**: Time step 
 
+The code is structured as follows: first, the system variables are defined. The integration step dt is established, along with the simulation time Tmax and the time vector t. Then, vectors are initialized to store the variables. Next, the duty cycle is defined. After 12 ms, the duty cycle increases by 1%. The pulse width modulation (PWM) is confined between zero and t, and the output u is defined to ensure a proper pulse width. Following this, the switched model is defined, and Euler integration is performed. The final step involves controlling the diode to prevent the current flowing through it from becoming negative. 
 
-
- 
-
- 
-
- 
-
-The code is structured as follows: first, the system variables are defined. The integration step dt is established, along with the simulation time Tmax and the time vector t. Then, vectors are initialized to store the variables. Next, the duty cycle is defined. After 12 ms, the duty cycle increases by 1%. The pulse width modulation (PWM) is confined between zero and t, and the output u is defined to ensure a proper pulse width. Following this, the switched model is defined, and Euler integration is performed. The final step involves controlling the diode to prevent the current flowing through it from becoming negative figure (1). 
-
- 
-
- 
-
- 
-
-Texto
-
-Descripción generada automáticamente 
-
-Matlab code 
-
-Texto
-
-Descripción generada automáticamente 
-
-(b) Python code: 
-
-Figure 1: Code in Matlab and Python. 
+A code is developed in matlab which is passed to python programming (**ecuaciones_dinamicas_original**).
 
 After implementing the code, the most relevant variables, which are the output voltage and the inductor current, are plotted to analyze their behavior with the simulations. 
 
 Furthermore, the code includes a main loop, a 'for' loop, which performs the calculations and the simulation of the Buck converter for each time step in the time vector. It calculates the duty cycle of the switch using pulse width modulation (PWM) to determine whether the switch is on or off, and then computes the differential equations to obtain the voltage across the capacitor and the current through the inductor. Additionally, it considers the action of the diode in the inductor to prevent negative currents. 
 
 The following graph is obtained from the code implemented in Python. 
+
+
+<div align="center">
+  <img src="original_matlab.png" alt="Vista previa del juego"/>
+</div>
 
  
 
