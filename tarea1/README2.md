@@ -22,40 +22,13 @@ To model the buck converter, mathematical equations are needed to analyze the sy
 Switch model (Inductor currents and capacitor voltages are described): 
 
 $$di_Ldt=V_gu−V_{cL}$$
-𝑑
-𝑖
-𝐿
-𝑑
-𝑡
-=
-𝑉
-𝑔
-𝑢
-−
-𝑉
-𝑐
-𝐿
- 
- 
-
-dVcdt=iLC−VcCR
-𝑑
-𝑉
-𝑐
-𝑑
-𝑡
-=
-𝑖
-𝐿
-𝐶
-−
-𝑉
-𝑐
-𝐶
-𝑅
- 
- 
-
+`
+<div align="center">
+  <img src="original_matlab.png" alt="Vista previa del juego" width="600" height="394"/>
+</div>
+`
+![csss](tarea1/imagenes/original_matlab.png)
+  
 To perform the mathematical model, we use the software MATLAB, in which we will develop all the equations and use the necessary variables to solve the behavior of this convertePrincipio del formularior. 
 
 The variables to develop the buck converter model are: 
