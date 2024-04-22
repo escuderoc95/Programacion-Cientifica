@@ -76,6 +76,15 @@ __init__: This method initializes the variables or attributes, which represent t
 
 **graficar**: This method plots the voltage on the capacitor(vC_sw) and the current in the inductor(iL_sw) as a function of time. 
 
+An uml diagram is presented which that includes declarations of variables and definitions of functions, with R: float, L: float, etc.: These lines are declare variables with names like R, L, C, also function definitions named calcular  and graficar  that likely perform calculations or generate graphs, respectively and  _init_(: This be a constructor function).
+
+<div align="center">
+  <img src="uml.png" alt="Vista previa del juego"/>
+
+</div>
+<div align="center"> Output voltage and current of the inductor with the original code using objects-oriented programming  </div> 
+<br>
+
 All this is developed in the **ecuaciones_dinamicas_oop.py**, use code using objects-oriented programming. 
 
 subsequently, an object of the class ConvertidorDCDC is instantiated with the specific parameters of the converter (resistance, inductance, capacitance, input and output voltages), then the calculate method is called to perform the calculations of the converter behavior. The code is finalized with the graficar method to visualize the results. 
