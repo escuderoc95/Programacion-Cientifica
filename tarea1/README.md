@@ -102,7 +102,7 @@ An uml diagram is presented which that includes declarations of variables and de
 <div align="center"> Output voltage and current of the inductor with the original code using objects-oriented programming  </div> 
 <br>
 
-All this is developed in the **ecuaciones_dinamicas_oop.py**, use code using objects-oriented programming. 
+All this is developed in the **ecuaciones_dinamicas_oop.py**, use code using objects-oriented programming. The complexity of creating the time vector t and the arrays iL_sw, vC_sw, d_sw, and u_sw is O(imax). The execution time of the code increases linearly with the number of points in the time vector t.
 
 subsequently, an object of the class ConvertidorDCDC is instantiated with the specific parameters of the converter (resistance, inductance, capacitance, input and output voltages), then the calculate method is called to perform the calculations of the converter behavior. The code is finalized with the graficar method to visualize the results. 
 
