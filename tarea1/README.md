@@ -15,6 +15,14 @@ Buck converter is compound inductor L, diode, switch S, capacitor C, and load (r
 
 To model the buck converter, mathematical equations are needed to analyze the system behavior as a function of time ​[5]​. This equation describes the inductor current and capacitor voltage in response to changes in PWM duty cycle and load conditions. In this way, the difference equations are solved to analyze the converter behavior in steady state. Then a control loop is used to calculate the inductor current, capacitor voltage and PWM duty cycle at each time step. 
 
+<div align="center">
+  <img src="convertidor.png" alt="Vista previa del juego"/>
+</div>
+
+<div align="center"> Buck converter and parameters  </div> 
+<br>
+
+
 Switch model (Inductor currents and capacitor voltages are described): 
 
 $$\frac{di_{l}}{dt}=\frac{V_{g}-V_{c}}{L}$$
