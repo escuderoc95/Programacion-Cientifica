@@ -66,6 +66,15 @@ The implemented code is as follows in **los3algoritmos.py**, this code has the i
 
 One of the modifications to the code was to define a function calculate_values() to calculate the values of the inductor current (iL_sw) and the capacitor voltage (vC_sw) for each time step using the differential equations of the Buck converter, something inside this function, calculate the derivative of the inductor current (diL_dt_sw) and the capacitor voltage (dVc_dt_sw) using the circuit equations, then update the inductor current and capacitor voltage values for each time step. In addition, functions are used to calculate averages, calculate differences between elements in an array, return positions of elements in an array and function to determine the sign of the elements of an array, **algoritmos.py**.  
 
+<div align="center">
+  <img src="Comparacion algoritmos.png" alt="Vista previa del juego"/>
+</div>
+
+<div align="center"> comparison of algorithms  </div> 
+<br>
+
+On the right side, algorithms with for loops are used to calculate the derivatives and the average. On the left side, a class is used to optimize the algorithm for calculating the average.
+
 **The code is now rewritten using Object Oriented Programming. It is also graphed and finished with the comparison between the implemented codes.**
 
 Functions and formulas are used, such as: 
