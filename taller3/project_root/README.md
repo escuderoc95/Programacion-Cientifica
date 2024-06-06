@@ -8,9 +8,13 @@ This project involves analyzing and simulating data from a Dual Active Bridge (D
 
 The objective of this simulation is to study the behavior and efficiency of the DAB converter under specific operating conditions, focusing on the phase shift. By analyzing the currents and voltages, we aim to better understand the converter performance, identify possible inefficiencies, and explore potential improvements.
 
+
 <div align="center">
-  <img src="convertidor.png" alt="Vista previa del juego"/>
+  <img src="/taller3/project_root/results/figures/DAB.png" alt="convertidor"/>
 </div>
+
+<div align="center"> DAB converter and parameters  </div> 
+<br>
 
 
 ## Parameters and Data Collected
