@@ -28,6 +28,12 @@ The objective of this simulation is to study the behavior and efficiency of the 
 
 ## Project Structure
 
+<div align="center">
+  <img src="/taller3/project_root/results/figures/lista-archivos.png" alt="convertidor"/>
+</div>
+
+<div align="center"> Project Structure  </div> 
+<br>
 
 ## How to Run the Project
 
