@@ -35,16 +35,6 @@ The objective of this simulation is to study the behavior and efficiency of the 
 <div align="center"> Project Structure  </div> 
 <br>
 
-## How to Run the Project
-
-### Prerequisites
-
-Ensure you have the necessary Python packages installed. You can install them using pip:
-
-```sh
-pip install pandas matplotlib fpdf scikit-learn
-
-```
 ## Preprocessing Script
 The preprocessing script loads the data, performs initial statistical analysis, normalizes the data, filters it within a specific time range, and performs a linear regression analysis.
 
