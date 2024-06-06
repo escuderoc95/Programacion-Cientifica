@@ -66,3 +66,20 @@ The PDF report includes:
 - Plots of the time series, area chart, and line chart.
 - Preprocessing results, including statistical analysis and data normalization.
 - Results of the linear regression analysis.
+
+## Setup and Installation
+
+### Prerequisites
+
+Ensure you have Python installed on your system. This project requires Python 3.6 or higher.
+
+### Installing Dependencies
+
+All required Python packages are listed in the requirements.txt file. To install them, follow these steps:
+
+1. Open a terminal or command prompt.
+2. Navigate to the root directory of the project where requirements.txt is located.
+3. Run the following command to install the dependencies:
+
+```sh
+pip install -r requirements.txt
