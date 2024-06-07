@@ -5,7 +5,7 @@
 This directory contains the output of the analysis and preprocessing scripts for the DAB converter simulation data. The results include statistical summaries, visualizations, and comprehensive PDF reports generated from the simulation data.
 
 
-### figures/
+### Figures
 
 This subdirectory contains various plots generated during the analysis. Each plot provides visual insights into different aspects of the simulation data.
 **Time Series Plot (Vlow)**
@@ -30,7 +30,7 @@ However, it's important to note that the separability of the data may depend on 
 - *time_series_plot.png*: A time series plot showing the low voltage over time.
 - *normalized_time_series_plot.png*: A time series plot showing the normalized low voltage over time.
 
-### analysis_results.pdf
+### Analysis_results.pdf
 
 This PDF report compiles all the results from the analysis and preprocessing scripts. It includes:
 
