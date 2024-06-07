@@ -51,6 +51,9 @@ The CV value is approximately 0.098, lower than 0.1, indicating high separabilit
 **Skewness**: A skewness value close to 0 suggests a symmetric distribution, while a positive or negative skewness indicates a skewed distribution. A skewness value of approximately 0.793 indicates a distribution that is moderately skewed to the right. This means that there are more values at the lower end of the distribution and fewer at the upper end.
 
 The Vlow variable demonstrates high consistency and stability, making it a good candidate for future analysis and possible control strategies in the simulation of the OBD converter. This provides a global understanding of the Vlow distribution.
+ - With a cv of 0.0978584400496104, Vlow is highly separable, meaning that there is little relative dispersion in the Vlow values.
+
+- An IQR of 0.539257554651865 and skewness of 0.7929962200966385 suggest that the variability and skewness are moderate, which could indicate moderate separability in certain contexts, depending on other factors such as the distribution of Vlow values.
 
 #### The results of the MSE and R^2 are explained as follows: 
 
